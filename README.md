@@ -33,7 +33,6 @@ npm install
 
 # Start the development server
 npm run dev
-```
 
 🧠 Project Structure
 src/
@@ -44,6 +43,7 @@ src/
 │   └── useSignalR.js     # Encapsulated SignalR logic
 ├── App.jsx
 └── main.jsx
+```
 
 ⚙️ SignalR Hub Details
 Hub URL: https://tech-test.raintor.com/Hub
