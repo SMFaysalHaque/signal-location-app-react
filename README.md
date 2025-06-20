@@ -1,12 +1,73 @@
-# React + Vite
+# 📍 Real-Time Location Sharing with React + SignalR
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a React-based application demonstrating real-time location communication between two users using SignalR and Leaflet. It features:
 
-Currently, two official plugins are available:
+- 📡 Live GPS data broadcasting (simulated)
+- 🗺️ Map display with real-time marker updates
+- ⚛️ React, Tailwind CSS, Leaflet, and SignalR
+- 🧩 Custom hook to encapsulate SignalR logic
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- 👤 **User A**: Simulates and sends live GPS coordinates
+- 👥 **User B**: Listens for updates and displays location on a Leaflet map
+- 🔄 Real-time communication powered by [SignalR](https://learn.microsoft.com/en-us/aspnet/core/signalr/introduction)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Technologies Used
+
+- [React](https://react.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [SignalR](https://learn.microsoft.com/en-us/aspnet/core/signalr/)
+- [Leaflet](https://leafletjs.com/)
+- [Axios](https://axios-http.com/)
+
+## 📦 Installation
+
+```bash
+# Clone the repo
+git clone https://github.com/your-username/real-time-location-app.git
+cd real-time-location-app
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+
+🧠 Project Structure
+src/
+├── components/
+│   ├── UserA.jsx         # Sends location
+│   └── UserB.jsx         # Receives and displays location
+├── hooks/
+│   └── useSignalR.js     # Encapsulated SignalR logic
+├── App.jsx
+└── main.jsx
+
+⚙️ SignalR Hub Details
+Hub URL: https://tech-test.raintor.com/Hub
+
+Send Location
+Method: SendLatLon
+
+Params: lat, lon, userName (your email)
+
+Receive Location
+Method: ReceiveLatLon
+
+Payload: {
+  "userName": "Default",
+  "lat": 25.73736464,
+  "lon": 90.3644747
+}
+
+🧪 Usage
+Open two tabs (or devices):
+
+Tab 1: User A — sends simulated location.
+
+Tab 2: User B — displays real-time location on the map.
+
+🌐 Demo: https://signal-location-app-smfaysalhaque.netlify.app/
+
+
