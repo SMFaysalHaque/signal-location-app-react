@@ -25,7 +25,7 @@ This is a React-based application demonstrating real-time location communication
 
 ```bash
 # Clone the repo
-git clone https://github.com/your-username/real-time-location-app.git
+git clone https://github.com/SMFaysalHaque/signal-location-app-react.git
 cd real-time-location-app
 
 # Install dependencies
